@@ -2,21 +2,26 @@ let inputNumber = ""
 let isZero = ""
 let isNegative = ""
 let isString = ""
-let submitValue = ""
+let sum = 0
+let lap = 0
+let average
 
 
 
 do{
     inputNumber = prompt("input your number") || ""
-    isZero = inputNumber == "0"
+    isZero = "0"
     isNegative = +inputNumber < 0
     isString =  inputNumber.trim() == ""
+    if(isNegative) inputNumber = 0
+    sum += +inputNumber
+    lap++
+    console.log(sum)
+    average = sum / (lap-1)
     
-  
-
-    if(isZero)alert("it's zero")
-    else if(isNegative) alert("it's negative")
-    else if(isString) alert("it's string")
+    
 
 
-}while(inputNumber = Number)
+}while(inputNumber != isZero && inputNumber != isString && inputNumber != isNegative)
+
+console.log(` total sum is ${sum} with the average of ${average}`)

@@ -19,7 +19,7 @@
 //         else if(outOfRange){
 //             alert(`Invalid range `)
 //         }
-    
+
 
 // }while( isEmpty || isNan )
 
@@ -42,41 +42,41 @@
 let outOfRange = ""
 let isNan = ""
 let isEmpty = ""
-let inputNumber =  ""
+let inputNumber = ""
 let guessNumber = 32
 let count = ""
 let attempNumber = ""
 let attempLimit = ""
-do{
+do {
     inputNumber = prompt("enter you number") || ""
     outOfRange = +inputNumber > 99 || +inputNumber < 1
     isNan = isNaN(inputNumber)
     isEmpty = inputNumber.trim() == ""
-    if(isNan || isEmpty) alert("Invalid input")
-    else if(outOfRange)alert("Invalid range")
+    if (isNan || isEmpty) alert("Invalid input")
+    else if (outOfRange) alert("Invalid range")
 
 
-}while(isNan || outOfRange || isEmpty)
+} while (isNan || outOfRange || isEmpty)
 
- do{
+do {
 
-    calcNumber = prompt("what's the number ?") || ""
     alert(`you have 4 attempt`)
+    calcNumber = prompt("what's the number ?") || ""
     count++
     outOfRange = +guessNumber > 99 || +guessNumber < 1
     isNan = isNaN(guessNumber)
     isEmpty = calcNumber.trim() == ""
-    if(count == 5){
-        alert(`you have exceeded attempt limit`) 
+    if (count == 5) {
+        alert(`you have exceeded attempt limit`)
         break
-    } 
-    else if(isNan || isEmpty) alert("Invalid input")
-    else if(outOfRange)alert("Invalid range")
-    else if(+calcNumber > guessNumber)alert("too high")
-    else if(+calcNumber < guessNumber)alert("too low")
-    attempNumber = prompt(`This is your ${count}th attempt`)
-    
-    
-    
-    console.log("bruh")
- }while(calcNumber != guessNumber)
+    }
+    else if (isNan || isEmpty) alert("Invalid input")
+    else if (outOfRange) alert("Invalid range")
+    else if (+calcNumber > guessNumber) alert("too high")
+    else if (+calcNumber < guessNumber) alert("too low")
+    attempNumber = alert(`This is your ${count}th attempt`)
+
+
+
+    // console.log("bruh")
+} while (calcNumber != guessNumber)
